@@ -32,52 +32,52 @@ public class FindSumPairBM {
         }
     }
 
-    @Benchmark
-    public void FindSumPair(Blackhole bh) {
-        for (int x : xs) {
-            bh.consume(new FindSumPair().findPairOfSum(ORDERED, x));
-        }
-    }
-
-    @Benchmark
-    public void FindSumPairUsingRangeORDERED(Blackhole bh) {
-        for (int x : xs) {
-            bh.consume(new FindSumPairUsingRange().findPairOfSum(ORDERED, x));
-        }
-    }
-
-    @Benchmark
-    public void FindSumPairUsingNonRecursionORDERED(Blackhole bh) {
-        for (int x : xs) {
-            bh.consume(new FindSumPairUsingNonRecursion().findPairOfSum(ORDERED, x));
-        }
-    }
-
-    @Benchmark
-    public void FindSumPairUsingStorageORDERED(Blackhole bh) {
-        for (int x : xs) {
-            bh.consume(new FindSumPairUsingStorage().findPairOfSum(ORDERED, x));
-        }
-    }
-
-    @Benchmark
-    public void FindSumPairUsingRangeUNORDERED(Blackhole bh) {
-        for (int x : xs) {
-            bh.consume(new FindSumPairUsingRange().findPairOfSum(UNORDERED, x));
-        }
-    }
-
-    @Benchmark
-    public void FindSumPairUsingNonRecursionUNORDERED(Blackhole bh) {
-        for (int x : xs) {
-            bh.consume(new FindSumPairUsingNonRecursion().findPairOfSum(UNORDERED, x));
-        }
-    }
-
-    @Benchmark
-    public void FindSumPairUsingStorageUNORDERED(Blackhole bh) {
-        for (int x : xs) {
-            bh.consume(new FindSumPairUsingStorage().findPairOfSum(UNORDERED, x));
-        }
-    }
+//    @Benchmark
+//    public void FindSumPair(Blackhole bh) {
+//        for (int x : xs) {
+//            bh.consume(new FindSumPair().findPairOfSum(ORDERED, x));
+//        }
+//    }
+//
+//    @Benchmark
+//    public void FindSumPairUsingRangeORDERED(Blackhole bh) {
+//        for (int x : xs) {
+//            bh.consume(new FindSumPairUsingRange().findPairOfSum(ORDERED, x));
+//        }
+//    }
+//
+//    @Benchmark
+//    public void FindSumPairUsingNonRecursionORDERED(Blackhole bh) {
+//        for (int x : xs) {
+//            bh.consume(new FindSumPairUsingNonRecursion().findPairOfSum(ORDERED, x));
+//        }
+//    }
+//
+//    @Benchmark
+//    public void FindSumPairUsingStorageORDERED(Blackhole bh) {
+//        for (int x : xs) {
+//            bh.consume(new FindSumPairUsingStorage().findPairOfSum(ORDERED, x));
+//        }
+//    }
+//
+//    @Benchmark
+//    public void FindSumPairUsingRangeUNORDERED(Blackhole bh) {
+//        for (int x : xs) {
+//            bh.consume(new FindSumPairUsingRange().findPairOfSum(UNORDERED, x));
+//        }
+//    }
+//
+//    @Benchmark
+//    public void FindSumPairUsingNonRecursionUNORDERED(Blackhole bh) {
+//        for (int x : xs) {
+//            bh.consume(new FindSumPairUsingNonRecursion().findPairOfSum(UNORDERED, x));
+//        }
+//    }
+//
+//    @Benchmark
+//    public void FindSumPairUsingStorageUNORDERED(Blackhole bh) {
+//        for (int x : xs) {
+//            bh.consume(new FindSumPairUsingStorage().findPairOfSum(UNORDERED, x));
+//        }
+//    }
 }

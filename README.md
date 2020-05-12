@@ -2,8 +2,9 @@
 
 Contains online interview question 
 ```list
-Google
+- Google
 ```
+
 
 ## Installation
 
@@ -23,6 +24,12 @@ FindSumPairBM
 Running Benchmarks
 ```python
 ./gradlew jmh
+```
+
+## Google Exercises
+```python
+- FindSumPairUsingStorage
+Given an array and a value find the 2 elements which make up the value
 ```
 
 ## License
