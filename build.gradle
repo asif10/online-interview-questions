@@ -1,0 +1,39 @@
+
+plugins {
+    id 'java'
+    id "me.champeau.gradle.jmh" version "0.5.0"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.23'
+    compile group: 'net.sf.jopt-simple', name: 'jopt-simple', version: '5.0.4'
+    testCompile group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.23'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jmh {
+    duplicateClassesStrategy = 'warn'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+            srcDir 'src/jmh/java'
+        }
+    }
+}
+
