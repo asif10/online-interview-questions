@@ -1,6 +1,7 @@
 package com.techq.questions.google;
 
-import com.techq.questions.general.GetValueFromArrays;
+import com.techq.questions.general.CSP;
+import com.techq.questions.general.GetClosesValueUsingGrid;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -47,10 +48,24 @@ public class GetValueFromArraysBM {
 //        }
 //    }
 
+//    @Benchmark
+//    public void GetValueFromArraysNoList(Blackhole bh) {
+//        for (int x : xs) {
+//            bh.consume(new GetValueFromArrays().findTargetV3(LIST1, LIST2, x));
+//        }
+//    }
+
     @Benchmark
     public void GetValueFromArraysNoList(Blackhole bh) {
         for (int x : xs) {
-            bh.consume(new GetValueFromArrays().findTargetV3(LIST1, LIST2, x));
+            bh.consume(new CSP().closestSumPair(LIST1, LIST2, x));
+        }
+    }
+
+    @Benchmark
+    public void GetClosesValueUsingGrid(Blackhole bh) {
+        for (int x : xs) {
+            bh.consume(new GetClosesValueUsingGrid().closestSumPair(LIST1, LIST2, x));
         }
     }
 }

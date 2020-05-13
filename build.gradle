@@ -15,7 +15,7 @@ dependencies {
     compile group: 'org.openjdk.jmh', name: 'jmh-core', version: '1.23'
     compile group: 'net.sf.jopt-simple', name: 'jopt-simple', version: '5.0.4'
     testCompile group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.23'
-    testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
+    testCompile('org.junit.jupiter:junit-jupiter:5.4.2')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
 
 }
